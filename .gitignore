@@ -1,8 +1,9 @@
+# ignore .setting which is eclipse specific
+.settings
+
 # ignore ALL target folder
 target
 
 # ignore ALL test-output folder
 test-output
-
-
 

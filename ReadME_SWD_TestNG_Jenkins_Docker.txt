@@ -81,7 +81,36 @@ Fourth time - update Notes.txt file...
 	$ git push origin master 
 	$ git status
 
-Clone new repository to local
+Clone new repository to local (Read only)
 	$ git clone "https://github.com/pavanoltraining/OpencartV121.git"
-	
+
+1.Eclipse workspace
+2.New repository on GitHub
+$ git config --global user.name  "Nadeem"
+$ git config --global user.email "go4nadeem@gmail.com"
+$ git config --list
+$ touch .gitignore (list file/folders to be ignored)
+$ git init
+$ git remote add origin https://github.com/OLC-NadeemShaikh/SWD_TestNG_Jenkins_Docker.git
+3.git add .
+$ git commit -m "fourth commit message"
+$ git status
+$ git push origin master 
+
+
+
+…or create a new repository on the command line
+echo "# SWD_TestNG_Jenkins_Docker" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/OLC-NadeemShaikh/SWD_TestNG_Jenkins_Docker.git
+git push -u origin master
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/OLC-NadeemShaikh/SWD_TestNG_Jenkins_Docker.git
+git branch -M master
+git push -u origin master
+
 
