@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="OrangeHRM TestSuite" parallel="none" thread-count="1">
+<test name="Chrome Test">
+	<parameter name="browser" value="chrome"></parameter>
+	<classes>
+		<class name="com.test.oranghrm.LoginPageTest"></class>
+	</classes>
+</test>
+</suite>
