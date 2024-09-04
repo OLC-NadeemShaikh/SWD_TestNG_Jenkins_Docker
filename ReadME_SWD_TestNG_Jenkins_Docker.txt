@@ -113,4 +113,12 @@ git remote add origin https://github.com/OLC-NadeemShaikh/SWD_TestNG_Jenkins_Doc
 git branch -M master
 git push -u origin master
 
+$ git remote remove origin (remote origin already exists)
+
+
+1.Eclipse Project
+2.Git push
+3.Jenkins Job for test execution (trigger)
+Pipeline
+4.Docker
 

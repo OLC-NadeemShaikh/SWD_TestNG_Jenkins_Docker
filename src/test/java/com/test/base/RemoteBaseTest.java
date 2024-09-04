@@ -9,28 +9,31 @@ import org.testng.annotations.BeforeMethod;
 import java.net.URL;
 import java.time.Duration;
 
-public class BaseTest {
-	public WebDriver driver;
-
+public class RemoteBaseTest {
+	protected static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
+	
 	public static String remote_url = "http://localhost:4444";
 	public final static int TIMEOUT = 5;
 
 	@BeforeMethod
 	public void setUp() throws Exception {
 
-		driver = new ChromeDriver();
-		driver.get("https://opensource-demo.orangehrmlive.com/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+		driver.set(new RemoteWebDriver(new URL(remote_url), options));
+		System.out.println("Browser Started : Chrome");
 
+		driver.get().get("https://opensource-demo.orangehrmlive.com/");
+		driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
+		
 	}
-
 	public WebDriver getDriver() {
-		return driver;
+		return driver.get();
 	}
 
 	@AfterMethod
 	public void closeBrowser() {
-		driver.close();
-		driver.quit();
+		driver.get().quit();
+		driver.remove();
 	}
 }
