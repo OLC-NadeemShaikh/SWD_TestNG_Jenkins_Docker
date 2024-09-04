@@ -68,5 +68,7 @@
 			</plugins>
 
 		</pluginManagement>
+		<!-- finalName overrides <name>-<version>.jar generation-->
+		<finalName>SWD_TestNG_Jenkins_Docker</finalName>
 	</build>
 </project>

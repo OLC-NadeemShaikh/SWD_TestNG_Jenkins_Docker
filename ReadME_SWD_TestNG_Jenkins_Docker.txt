@@ -98,22 +98,25 @@ $ git status
 $ git push origin master 
 
 
-
+Github approach and commands on creation of new repository
 …or create a new repository on the command line
 echo "# SWD_TestNG_Jenkins_Docker" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M master
-git remote add origin https://github.com/OLC-NadeemShaikh/SWD_TestNG_Jenkins_Docker.git
-git push -u origin master
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git branch -M master
+$ git remote add origin https://github.com/OLC-NadeemShaikh/SWD_TestNG_Jenkins_Docker.git
+$ git push -u origin master
 
 …or push an existing repository from the command line
-git remote add origin https://github.com/OLC-NadeemShaikh/SWD_TestNG_Jenkins_Docker.git
-git branch -M master
-git push -u origin master
+$ git remote add origin https://github.com/OLC-NadeemShaikh/SWD_TestNG_Jenkins_Docker.git
+$ git branch -M master
+$ git push -u origin master
 
-$ git remote remove origin (remote origin already exists)
+$ git remote remove origin (if remote origin already exists)
+
+:=>Jenkins setup using local workspace
+
 
 
 1.Eclipse Project
